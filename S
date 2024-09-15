@@ -1,0 +1,146 @@
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+
+export default function SaudiArabiaNationalDay() {
+  const saudiInfo = [
+    "المملكة العربية السعودية هي أكبر دولة في شبه الجزيرة العربية.",
+    "تأسست المملكة العربية السعودية الحديثة في عام 1932 على يد الملك عبد العزيز آل سعود.",
+    "اللغة الرسمية هي اللغة العربية.",
+    "العملة الرسمية هي الريال السعودي.",
+    "تحتوي المملكة على أكبر احتياطي نفطي في العالم.",
+    "مكة المكرمة والمدينة المنورة هما أقدس مدينتين في الإسلام وتقعان في السعودية.",
+    "تغطي صحراء الربع الخالي جزءًا كبيرًا من جنوب شرق البلاد.",
+    "يعتبر مشروع نيوم أحد أكبر المشاريع التنموية في العالم.",
+    "تمتلك المملكة أطول ساحل على البحر الأحمر.",
+    "جبل سودة هو أعلى قمة جبلية في المملكة.",
+    "تعد المملكة موطنًا لخمسة مواقع مدرجة على قائمة التراث العالمي لليونسكو.",
+    "الصقر هو الطائر الوطني للمملكة العربية السعودية.",
+    "تعد السعودية من أكبر منتجي ومصدري التمور في العالم.",
+    "يعتبر مهرجان الجنادرية أحد أهم المهرجانات الثقافية في المملكة.",
+    "تحتضن المملكة أكبر حقل نفط بري في العالم وهو حقل الغوار.",
+    "تم افتتاح أول دار سينما في المملكة في عام 2018.",
+    "تعد جامعة الملك عبد الله للعلوم والتقنية (كاوست) من أحدث الجامعات البحثية في العالم.",
+    "يعتبر مشروع البحر الأحمر أحد أهم المشاريع السياحية في المملكة.",
+    "تم السماح للنساء بقيادة السيارات في المملكة في عام 2018.",
+    "تعد مدينة العلا من أهم الوجهات السياحية والأثرية في المملكة.",
+    "يعتبر صندوق الاستثمارات العامة السعودي من أكبر الصناديق السيادية في العالم.",
+    "تمتلك المملكة أكبر محطة لتحلية المياه في العالم.",
+    "تعد الهيئة الملكية للجبيل وينبع من أكبر المجمعات الصناعية في العالم.",
+    "يعتبر مركز الملك عبد الله المالي في الرياض أحد أبرز المعالم الحديثة في المملكة.",
+    "تم إطلاق برنامج جودة الحياة كجزء من رؤية 2030 لتحسين نمط حياة المواطنين والمقيمين.",
+    "تعد واحة الأحساء أكبر واحة نخيل في العالم.",
+    "يعتبر متحف اللوفر أبوظبي أول متحف عالمي في العالم العربي.",
+    "تم إنشاء الهيئة العامة للترفيه في عام 2016 لتنظيم وتطوير قطاع الترفيه في المملكة.",
+    "تعد مدينة نيوم المستقبلية مشروعًا طموحًا يهدف إلى إنشاء منطقة اقتصادية خاصة شمال غرب المملكة.",
+    "تم إطلاق مشروع القدية كأول مدينة ترفيهية ورياضية وثقافية في المملكة."
+  ];
+
+  const nationalDayInfo = [
+    "يحتفل باليوم الوطني السعودي في 23 سبتمبر من كل عام.",
+    "يمثل اليوم الوطني ذكرى توحيد المملكة على يد الملك عبد العزيز آل سعود في عام 1932.",
+    "يعتبر يوم إجازة رسمية في جميع أنحاء المملكة.",
+    "تقام احتفالات وفعاليات متنوعة في مختلف مدن المملكة.",
+    "يتم تزيين الشوارع والمباني بالأعلام الخضراء والشعارات الوطنية.",
+    "تنظم العروض الجوية والألعاب النارية في المدن الرئيسية.",
+    "يرتدي المواطنون الملابس التقليدية ويرفعون الأعلام الوطنية.",
+    "تقدم المتاحف والمواقع الثقافية عروضًا خاصة وفعاليات تعليمية.",
+    "يتم إطلاق مبادرات وطنية جديدة في هذا اليوم.",
+    "يعتبر فرصة لتعزيز الوحدة الوطنية والفخر بالهوية السعودية."
+  ];
+
+  const capitalInfo = [
+    "الرياض هي عاصمة المملكة العربية السعودية.",
+    "تقع في وسط شبه الجزيرة العربية.",
+    "يبلغ عدد سكانها حوالي 7.6 مليون نسمة.",
+    "تعتبر المركز السياسي والإداري للمملكة.",
+    "تضم العديد من ناطحات السحاب الحديثة مثل برج المملكة وبرج الفيصلية.",
+    "تحتوي على العديد من المتاحف والمعالم التاريخية مثل قصر المصمك.",
+    "تعد مركزًا ماليًا وتجاريًا هامًا في المنطقة.",
+    "تشهد تطورًا سريعًا في البنية التحتية والمشاريع الضخمة.",
+    "تحتضن العديد من الجامعات والمؤسسات التعليمية الرائدة.",
+    "تتميز بمناخ صحراوي حار وجاف."
+  ];
+
+  return (
+    <div className="flex flex-col min-h-screen bg-green-500 text-white">
+      <header className="py-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center">المملكة العربية السعودية</h1>
+        </div>
+      </header>
+
+      <main className="flex-grow container mx-auto px-4 py-12">
+        <section className="mb-16 text-center">
+          <h2 className="text-6xl font-bold mb-4">اليوم الوطني السعودي</h2>
+          <p className="text-2xl mb-8">نحتفل بتاريخنا ونستشرف مستقبلنا</p>
+        </section>
+
+        <section className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center">معلومات عن المملكة العربية السعودية</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {saudiInfo.map((info, index) => (
+              <Card key={index} className="bg-green-600 border-white border">
+                <CardContent className="p-6">
+                  <p className="text-right text-lg">{info}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center">اليوم الوطني السعودي</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {nationalDayInfo.map((info, index) => (
+              <Card key={index} className="bg-green-600 border-white border">
+                <CardContent className="p-6">
+                  <p className="text-right text-lg">{info}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center">معلومات عن العاصمة (الرياض)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {capitalInfo.map((info, index) => (
+              <Card key={index} className="bg-green-600 border-white border">
+                <CardContent className="p-6">
+                  <p className="text-right text-lg">{info}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center">صور من المملكة</h3>
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              <CarouselItem>
+                <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5669-SnxedefkCIitAp0F7c354CbQ2eSVGX.jpeg" width={1200} height={800} alt="أفق مدينة الرياض ليلاً" className="rounded-lg shadow-2xl" />
+              </CarouselItem>
+              <CarouselItem>
+                <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5668-jqjjhJE1EktWWf1ZyIEGKf7DyOjT3X.jpeg" width={1200} height={800} alt="خريطة المملكة العربية السعودية مع العلم" className="rounded-lg shadow-2xl" />
+              </CarouselItem>
+              <CarouselItem>
+                <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5666-Mh6TdIKupSHnRBtW8KE2qOrcGOMbfP.jpeg" width={1200} height={800} alt="برج الفيصلية في الرياض عند الغروب" className="rounded-lg shadow-2xl" />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="text-green-500 bg-white" />
+            <CarouselNext className="text-green-500 bg-white" />
+          </Carousel>
+        </section>
+      </main>
+
+      <footer className="py-8 bg-green-600">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-lg mb-2">© 2024 موقع المملكة العربية السعودية. جميع الحقوق محفوظة.</p>
+          <p className="text-lg">عمل الطالب: محمد | شعبة: 10</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
